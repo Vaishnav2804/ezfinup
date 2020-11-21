@@ -11,7 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- CSS file -->
-    <link rel="stylesheet" href="CSS/home.css">
+   <link rel="stylesheet" href="{{ url_for('static',filename='styles/home.css') }}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -31,14 +31,14 @@
 
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="home.html"
+                        <li class="nav-item active"><a href="#"
                                 class="nav-link text-uppercase font-weight-bold">Home <span
                                     class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="about.html"
+                        <li class="nav-item"><a href="{{url_for('about')}}"
                                 class="nav-link text-uppercase font-weight-bold">About</a></li>
-                        <li class="nav-item"><a href="bbc.html"
+                        <li class="nav-item"><a href="{{url_for('news')}}"
                                 class="nav-link text-uppercase font-weight-bold">News</a></li>
-                        <li class="nav-item"><a href="search.html"
+                        <li class="nav-item"><a href="{{url_for('search')}}"
                                 class="nav-link text-uppercase font-weight-bold">Search</a></li>
                         </li>
                     </ul>
@@ -56,21 +56,16 @@
                     and supply, and the ultimate goal of buying shares is to make money by buying stocks in companies
                     whose perceived value (i.e., share price) is expected to rise. Stock markets are closely linked with
                     the world of economics —the rise and fall of share prices can be traced back to some Key Performance
-                    Indicators (KPI's). The five most commonly used KPI's are the opening stock price (`Open'),
-                    end-of-day price (`Close'), intraday low price (`Low'), intra-day peak price (`High'), and total
-                    volume of stocks traded during the day (`Volume'). Economics and stock prices are mainly reliant
-                    upon subjective perceptions about the stock market. It is near impossible to predict stock prices to
-                    the T, owing to the volatility of factors that play a major role in the movement of prices. However,
-                    it is possible to make an educated estimate of prices. Stock prices never vary in isolation: the
-                    movement of one tends to have an avalanche effect on several other stocks as well. This aspect of
-                    stock price movement can be used as an important tool to predict the prices of many stocks at once.
-                    Due to the sheer volume of money involved and number of transactions that take place every minute,
-                    there comes a trade-off between the accuracy and the volume of predictions made; as such, most stock
-                    prediction systems are implemented in a distributed, parallelized fashion. These are some of the
-                    considerations and challenges faced in stock market analysis.
+                    Indicators (KPI's). We will be using LSTM algorithm to predict the future closing stock price of a company.
                 </p>
 
-                <h1 class="display-5 text-center">objective</h1>
+                <div class="card bg-dark text-white">
+  <img class="card-img" src="{{ url_for('static',filename='images/stock1.jfif') }}" alt="Card image">
+  <div class="card-img-overlay">
+  </div>
+</div>
+
+                <h1 class="display-5 text-center">Objective</h1>
                 <p align="justify">In the past decades, there is an increasing interest in predicting markets among
                     economists, policymakers, academics and market makers. The objective of the proposed work is to
                     study and improve the supervised learning algorithms to predict the stock price.

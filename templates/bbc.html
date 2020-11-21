@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <title>Flask Aljazera English News</title>
 
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}">
-</head>
-=======
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/bbc.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/bbc.css') }}">
 
     <!-- CSS file -->
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 
->>>>>>> Stashed changes
+
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg fixed-top py-3">
@@ -29,14 +30,14 @@
 
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="home.html"
+                        <li class="nav-item active"><a href="{{url_for('home')}}"
                                 class="nav-link text-uppercase font-weight-bold">Home <span
                                     class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="about.html"
+                        <li class="nav-item"><a href="{{url_for('about')}}"
                                 class="nav-link text-uppercase font-weight-bold">About</a></li>
-                        <li class="nav-item"><a href="bbc.html"
+                        <li class="nav-item"><a href="#"
                                 class="nav-link text-uppercase font-weight-bold">News</a></li>
-                        <li class="nav-item"><a href="search.html"
+                        <li class="nav-item"><a href="{{url_for('search')}}"
                                 class="nav-link text-uppercase font-weight-bold">Search</a></li>
                         </li>
                     </ul>
@@ -45,11 +46,13 @@
         </nav>
     </header>
 
-<<<<<<< Updated upstream
-<div class="jumbotron" style="color:black">
-=======
-    <!--<div class="jumbotron" style="color:black">
->>>>>>> Stashed changes
+
+
+
+    <div class="jumbotron" style="color:black">
+
+
+
 
     <h1 style="color:black">
 
@@ -62,21 +65,23 @@
 
     <div class="container mt-5 py-5">
 
-<<<<<<< Updated upstream
+
     {% for new, des, i in context %}
-=======
-        {% for new, des, i in context %}
->>>>>>> Stashed changes
 
-        <img src="{{i}}" alt="">
-        <h3>News: </h3> {{new}}
-        <h4>Description: </h4> {{des}}
+        <div class="card" style="width: 50rem;">
+  <img class="card-img-top" src="{{i}}" alt="Card image cap">
+  <div class="card-body" style="background-color:black">
+    <h3 class="card-title" style="color:white">News:</h5> 
+    <p> {{new}}</p>
+    <h4 style="color:white">Description: </h4> <p>{{des}}</p>
+    <br>
+    <a href="https://www.bbc.com/news" class="btn btn-primary">Read More</a>
+  </div>
+</div>
+        
 
-<<<<<<< Updated upstream
     {% endfor %}
-=======
-        {% endfor %}
->>>>>>> Stashed changes
+
 
     </div>
 

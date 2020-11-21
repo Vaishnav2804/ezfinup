@@ -208,13 +208,13 @@ def display(start,end,symbol):
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return render_template('homepage.html')
+    return render_template('home.html')
 
-@app.route("/sid/")
+@app.route("/sid/" , methods=["post"])
 def hello():
-    start=request.args.get('start')
-    end=request.args.get('end')
-    symbol=request.args.get('symbol')
+    start=request.form.get('Strt_dt')
+    end=request.form.get('End_dt')
+    symbol=request.form.get('Name')
     
     display(start,end,symbol)
     return render_template('main.html')
@@ -250,7 +250,11 @@ def news():
 
 @app.route('/search')
 def search():
-    return render_template('pagetwo.html')
+    return render_template('search.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
     
    
 if __name__ == '__main__':

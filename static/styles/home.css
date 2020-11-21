@@ -90,3 +90,18 @@ body{
         background-position: 0% 50%;
     }
 }
+
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+
+p{
+    font-style: italic;
+}
+
+.container {
+border: 12px solid #FF4509;
+border-radius: 10px;
+margin-top: 15px;
+margin-bottom: 15px;
+}

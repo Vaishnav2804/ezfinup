@@ -11,7 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- CSS file -->
-    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/about.css') }}">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
 
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="home.html"
+                        <li class="nav-item active"><a href="{{url_for('home')}}"
                                 class="nav-link text-uppercase font-weight-bold">Home <span
                                     class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
@@ -46,14 +46,41 @@
             </div>
         </nav>
     </header>
+    
 
     <div class="container">
         <div class="pt-5 text-white">
             <header class="py-5 mt-5">
-                <h1 class="display-5 text-center">Project By</h1>
-                <p align=center>V Vaishnav</p>
-                <p align="center">Sidharth R V</p>
-                <p align="center">Sudharshan U</p>
+                <h1 class="display-5 text-center">Our Team</h1>
+                <div class="card-deck">
+  <div class="card" style="background-color:black">
+    <img class="card-img-top" src="{{ url_for('static',filename='images/vaish.jpeg') }}" alt="Card image cap"  height="450">
+    <div class="card-body">
+      <h4 class="card-title" align=center><strong>Vaishnav</strong></h4>
+      <h6 align=center>Data Scientist</h5>
+      <p class="card-text">An AI aspirant who learn, code and makes impact.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card" style="background-color:black">
+    <img class="card-img-top" src="{{ url_for('static',filename='images/sid.jpeg') }}" alt="Card image cap" height="450">
+    <div class="card-body">
+      <h4 class="card-title" align=center><strong>Sidharth</strong></h4>
+      <h6 align=center>Web-Developer</h5>
+      <p class="card-text">Gym boy willing to take up 50 pushups and eat 20eggs a days</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card" style="background-color:black">
+    <img class="card-img-top" src="{{ url_for('static',filename='images/sudharshan.jpeg') }}" alt="Card image cap" height="450">
+    <div class="card-body">
+      <h4 class="card-title" align=center><strong>Sudharshan</strong></h4>
+      <h6 align=center>Front-End Developer</h5>
+      <p class="card-text">People call me "UZZ". Hobbies: Dating and flirting with girls...</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
             </header>
         </div>
     </div>
