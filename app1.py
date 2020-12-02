@@ -117,7 +117,7 @@ def predictIdea():
     model.add(Dense(1))
     model.compile(loss='mean_squared_error',optimizer='adam')
 
-    model.fit(X_train,y_train,validation_data=(X_test,ytest),epochs=1,batch_size=64,verbose=1)
+    model.fit(X_train,y_train,validation_data=(X_test,ytest),epochs=10,batch_size=64,verbose=1)
 
     train_predict=model.predict(X_train)
     test_predict=model.predict(X_test)
@@ -171,11 +171,11 @@ def predictIdea():
             
             lst_output.extend(yhat.tolist())
             i=i+1
-
+    
     day_new=np.arange(1,101) #testdata 100indexes
-    day_pred=np.arange(101,104) #101-131-predicted
+    day_pred=np.arange(101,104) #101-131-predicted 
 
-    plt.plot(day_new,scaler.inverse_transform(df1[1130:]))
+    plt.plot(day_new,scaler.inverse_transform(df1[1131:]))
     plt.plot(day_pred,scaler.inverse_transform(lst_output))
     plt.savefig('static/images/IDEA.png')
     
@@ -208,7 +208,7 @@ def display(start,end,symbol):
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('hme.html')
 
 @app.route("/sid/" , methods=["post"])
 def hello():
