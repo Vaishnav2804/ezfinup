@@ -49,15 +49,69 @@
     </header>
     <div class="tb">
         <div class="container mt-5 py-5">
-            <form action="/sid/" method="post">
-            <label for="Name">Name:</label>
-            <input type="text" id="Name" name="Name">
-            <label for="Strt_dt">Start Date:</label>
-            <input type="date" id="Strt_dt" name="Strt_dt">
-            <label for="End-dt">End Date:</label>
-            <input type="date" id="End_dt" name="End_dt">
-            <button class="btn btn-warning btn-sm" type="submit">Search</button>
-                </form>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title" style="color: black;">Search for a Stock Symbol</h5>
+                    <form action="/sid/" method="post">
+                        <label for="Name" style="color:black;">Name:</label>
+                        <input type="text" id="Name" name="Name">
+                        <label for="Strt_dt" style="color:black;">Start Date:</label>
+                        <input type="date" id="Strt_dt" name="Strt_dt">
+                        <label for="End-dt" style="color:black;">End Date:</label>
+                        <input type="date" id="End_dt" name="End_dt">
+                        <button class="btn btn-warning btn-sm" type="submit">Search</button>
+                    </form>
+                </div>
+                    <div class="container">
+                        <table class="table table-dark">
+                            <thead>
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Company Name</th>
+                                <th scope="col">Stock Symbol</th>
+                                <th scope="col">Stock Exchange</th>
+                                <th scope="col">Search</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row">1</th>
+                                <td>Vodafone Idea Limited</td>
+                                <td>IDEA</td>
+                                <td>NSE</td>
+                                <td>IDEA.NS</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">2</th>
+                                <td>Amazon</td>
+                                <td>AMZN</td>
+                                <td>NASDAQ</td>
+                                <td>AMZN</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">3</th>
+                                <td>Tesla</td>
+                                <td>TSLA</td>
+                                <td>NASDAQ</td>
+                                <td>TSLA</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">4</th>
+                                <td>Apple</td>
+                                <td>AAPL</td>
+                                <td>NASDAQ</td>
+                                <td>AAPL</td>
+                                </tr>
+                                <th scope="row">5</th>
+                                <td>Alphabet</td>
+                                <td>GOOG</td>
+                                <td>NASDAQ</td>
+                                <td>GOOG</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
         </div>
     </div>
 
